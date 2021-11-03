@@ -1,11 +1,11 @@
 import styled from 'styled-components';
+import Header from './components/header/Header';
 
 const App = () => {
-  return <AppContainer>APP</AppContainer>;
+  return (<div>
+    <Header />
+    APP
+    </div>);
 };
 
 export default App;
-
-const AppContainer = styled.div`
-  background-color: ${({ theme }) => theme.colors.yellow[400]};
-`;
