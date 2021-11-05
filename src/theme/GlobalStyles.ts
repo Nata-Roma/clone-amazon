@@ -9,4 +9,21 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+  a {
+    text-decoration: none;
+  }
+  input,
+  button,
+  textarea,
+  select {
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  button,
+  a,
+  select {
+    cursor: pointer;
+  }
 `;

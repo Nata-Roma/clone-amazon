@@ -4,11 +4,13 @@ import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { GlobalStyles } from './theme/GlobalStyles';
 import { theme } from './theme/theme';
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <BrowserRouter>
+    <GlobalStyles />
       <App />
     </BrowserRouter>
   </ThemeProvider>,

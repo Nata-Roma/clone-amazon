@@ -1,0 +1,24 @@
+.selectSelected::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 5px;
+  transform: translateY(-30%);
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #333 transparent transparent transparent;
+}
+
+.selectArrowActive:after {
+  border-color: transparent transparent #333 transparent;
+  transform: translateY(-70%);
+}
+
+.selectHide {
+  display: none;
+}
+
+.sameAsSelected {
+  background-color: rgba(0, 0, 0, 0.1);
+}

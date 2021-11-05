@@ -1,17 +1,26 @@
-import styled from "styled-components";
+import { FC } from 'react';
+import styled from 'styled-components';
+import { IHeader } from '../../utils/interfaces/interfaceHeader';
+import HeaderTopLine from './headerTopLine/HeaderTopLine';
+import HeaderBottomLine from './headerBottomLine/HeaderBottomLine';
 
-const Header = () => {
-  return (
-    <HomeContainer>
-      Header
-    </HomeContainer>
-  );
+interface HeaderProps {
+  langConfig: IHeader;
 }
+
+const Header: FC<HeaderProps> = ({ langConfig }) => {
+  return (
+    <HeaderContainer>
+      <HeaderTopLine config={langConfig.topLine} />
+      <HeaderBottomLine config={langConfig.bottomLine} />
+    </HeaderContainer>
+  );
+};
 
 export default Header;
 
-const HomeContainer = styled.div`
-  background-color: ${({ theme }) => theme.colors.yellow[400]};
-  background-color: #131921;
-  background-color: #232f3e;
+const HeaderContainer = styled.div`
+  max-width: ${({ theme }) => theme.breakpoints.lg};
 `;
+
+
